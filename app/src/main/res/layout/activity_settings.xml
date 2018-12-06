@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rosato.polimi.cardgame.activities.SettingsActivity"
+    android:orientation="vertical"
+    android:background="@drawable/settings_background">
+
+    <ScrollView
+        android:id="@+id/scrollView901"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:text="@string/settings_title"
+                style="@style/Subtitle"
+                android:textAlignment="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/difficulty_spinner_label"
+                    android:text="Difficulty"
+                    style="@style/Label"/>
+                <Spinner
+                    android:id="@+id/difficulty_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/difficulty_array"/>
+
+                <TextView
+                    android:id="@+id/game_mode_spinner_label"
+                    android:text="Game Mode"
+                    style="@style/Label"
+                    android:layout_marginTop="20dp"/>
+                <Spinner
+                    android:id="@+id/game_mode_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/game_mode_array"/>
+
+                <CheckBox
+                    android:id="@+id/show_player1_hand_checkbox"
+                    android:text="Always Show Player 1 Hand"
+                    style="@style/Label"
+                    android:layout_marginTop="20dp"/>
+
+                <CheckBox
+                    android:id="@+id/show_player2_hand_checkbox"
+                    android:text="Always Show Player 2 Hand"
+                    style="@style/Label"/>
+
+                <TextView
+                    android:id="@+id/who_starts_spinner_label"
+                    android:text="Who Starts"
+                    style="@style/Label"
+                    android:layout_marginTop="20dp"/>
+                <Spinner
+                    android:id="@+id/who_starts_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/who_starts_array"/>
+
+                <TextView
+                    android:id="@+id/deck_spinner_label"
+                    android:text="Select Deck"
+                    style="@style/Label"
+                    android:layout_marginTop="20dp"/>
+                <Spinner
+                    android:id="@+id/deck_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/deck_array"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+
+                <Button
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/save_settings_button"
+                    style="@style/MenuButton"
+                    android:layout_alignRight="@id/anchor"
+                    android:text="Save" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/anchor"
+                    android:text=""
+                    android:layout_centerHorizontal="true"
+                    android:visibility="invisible"/>
+
+                <Button
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/back_settings_button"
+                    style="@style/MenuButton"
+                    android:layout_alignLeft="@id/anchor"
+                    android:text="Back" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,5 @@
+com.rosato.polimi.cardgame
+com.rosato.polimi.cardgame.exceptions
+com.rosato.polimi.cardgame.models
+com.rosato.polimi.cardgame.models.interfaces
+com.rosato.polimi.cardgame.models.repositories

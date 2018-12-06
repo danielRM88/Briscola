@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rosato.polimi.cardgame.activities.RoomActivity"
+    android:padding="15dp"
+    android:orientation="vertical"
+    android:background="@drawable/remote_background">
+
+    <TextView
+        android:id="@+id/title"
+        android:text="@string/menu_title"
+        style="@style/Title"/>
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:text="Please select the room you want to participate in!"
+        android:background="@color/colorLightBackground"
+        android:textColor="@color/black"
+        style="@style/Subtitle"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="75dp">
+
+        <Button
+            android:id="@+id/public_room_button"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            style="@style/MenuButton"
+            android:layout_alignRight="@id/anchor"
+            android:text="Public Room" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/anchor"
+            android:text=""
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/group_room_button"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            style="@style/MenuButton"
+            android:layout_alignLeft="@id/anchor"
+            android:text="Group 19 Room" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rosato.polimi.cardgame.activities.HistoryActivity"
+    android:orientation="vertical"
+    android:background="@drawable/settings2"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:text="History"
+        style="@style/Title"/>
+
+    <TableLayout
+        android:id="@+id/histories_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="50dp"
+        android:padding="20dp"
+        android:background="@color/colorLightBackground">
+    </TableLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/reset_history_button"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            style="@style/MenuButton"
+            android:layout_alignRight="@id/anchor"
+            android:text="Reset" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/anchor"
+            android:text=""
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/back_history_button"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            style="@style/MenuButton"
+            android:layout_alignLeft="@id/anchor"
+            android:text="Back" />
+    </RelativeLayout>
+
+</LinearLayout>
